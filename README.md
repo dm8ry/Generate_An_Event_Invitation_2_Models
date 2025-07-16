@@ -1,71 +1,104 @@
-# Event Invitation Generator 🎉
+# Event Invitation Generator with Dual AI Models 🎉
 
-A Python-based application that helps you generate beautiful and customized event invitations using Generative AI powered by AWS Bedrock.
+A sophisticated Python application that generates professional event invitations using AWS Bedrock's Claude AI model. This advanced version implements two AI models for enhanced content generation and customization.
 
-## 📋 Description
+## 🌟 Overview
 
-Event Invitation Generator is a tool designed to simplify the process of creating professional and attractive event invitations. Leveraging the power of Generative AI through AWS Bedrock, this application creates unique and personalized invitations for any occasion. Whether you're planning a birthday party, wedding, corporate event, or any other special occasion, this application helps you generate personalized invitations quickly and efficiently.
+Event Invitation Generator is a powerful tool that automates the creation of compelling event invitations. By leveraging AWS Bedrock's capabilities and implementing dual AI models, it provides more accurate, context-aware, and professionally crafted invitations for various event types.
 
-## ✨ Features
+## ✨ Key Features
 
-- AI-powered invitation text generation using AWS Bedrock
-- Intelligent content suggestions based on event type
-- Easy-to-use invitation generation interface
-- Customizable templates
-- Support for various event types
-- Export options for different formats
-- Text and design customization options
+- **Dual AI Model Architecture**
+  - Primary model for content generation
+  - Secondary model for content refinement and optimization
+- **Advanced Content Generation**
+  - Context-aware invitation text
+  - Smart formatting suggestions
+  - Tone and style customization
+- **Flexible Configuration**
+  - Customizable templates
+  - Multiple output formats
+  - Personalization options
+- **AWS Integration**
+  - Seamless AWS Bedrock integration
+  - Efficient API utilization
+  - Secure credential management
 
-## 🤖 AI Technology Stack
+## 🛠️ Technical Stack
 
-- **AWS Bedrock** - Cloud-based foundation model service
-- **Claude AI Model** - For natural language generation and text customization
-- **Generative AI** - Powers the creative content generation
+- **Backend**
+  - Python 3.x
+  - AWS SDK (Boto3)
+  - AWS Bedrock
+- **AI Models**
+  - Claude AI (Primary)
+  - Secondary AI Model for Enhancement
+- **Dependencies**
+  - AWS Bedrock SDK
+  - Python standard libraries
+  - Additional requirements specified in `requirements.txt`
 
-## 🚀 Getting Started
+## 🚀 Installation
 
-### Prerequisites
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/dm8ry/Generate_An_Event_Invitation_2_Models.git
+   cd Generate_An_Event_Invitation_2_Models
+   ```
 
-- Python 3.x
-- pip (Python package manager)
-- AWS account with Bedrock access
-- AWS credentials configured
+2. **Set Up Environment**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/dm8ry/Generate_An_Event_Invitation.git
-```
-
-2. Navigate to the project directory
-```bash
-cd Generate_An_Event_Invitation
-```
-
-3. Install required dependencies
-```bash
-pip install -r requirements.txt
-```
-
-4. Configure AWS credentials
-```bash
-aws configure
-```
+3. **Configure AWS**
+   ```bash
+   aws configure
+   ```
+   Enter your AWS credentials when prompted:
+   - AWS Access Key ID
+   - AWS Secret Access Key
+   - Default region
+   - Output format
 
 ## 💻 Usage
 
-python Generate_An_Event_Invitation.py https://aws-experience.com/emea/uki/e/804cf/aws-marketplace---digital-procurement-event \
---generate_email \
---email_to your.name@company.com \
---output invite.txt \
---registration_link https://aws-experience.com/emea/uki/e/804cf/aws-marketplace---digital-procurement-event
+### Basic Command
+```bash
+python Generate_An_Event_Invitation.py \
+  --event_url <event_url> \
+  --generate_email \
+  --email_to <recipient_email> \
+  --output <output_file> \
+  --registration_link <registration_url>
+```
 
-## 🛠️ Technologies Used
+### Example
+```bash
+python Generate_An_Event_Invitation.py \
+  --event_url https://aws-experience.com/emea/uki/e/804cf/aws-marketplace---digital-procurement-event \
+  --generate_email \
+  --email_to your.name@company.com \
+  --output invite.txt \
+  --registration_link https://aws-experience.com/emea/uki/e/804cf/aws-marketplace---digital-procurement-event
+```
 
-- Python
-- AWS Bedrock
-- Claude AI Model - 
-- AWS SDK for Python (Boto3)
+## ⚙️ Configuration Options
 
-# Generate_An_Event_Invitation_2_Models
+| Parameter | Description | Required |
+|-----------|-------------|----------|
+| `--event_url` | URL of the event page | Yes |
+| `--generate_email` | Flag to generate email format | No |
+| `--email_to` | Recipient email address | If `--generate_email` is used |
+| `--output` | Output file path | Yes |
+| `--registration_link` | Event registration URL | Yes |
+
+## 🔒 Security
+
+- Ensure AWS credentials are properly configured
+- Never commit sensitive credentials to the repository
+- Use environment variables for sensitive information
+- Follow AWS security best practices
+
+---
+
